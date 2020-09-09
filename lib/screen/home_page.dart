@@ -22,6 +22,18 @@ class HomePageBody extends StatefulWidget{
 class HomePageBodyState extends State<HomePageBody>{
   @override
   Widget build(BuildContext context) {
-    return Container(child: Column(children: [TextField(),ListView()],),);
+    return Column(children: [Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextField(
+        onChanged: (value)=>{print(value)},
+        decoration: InputDecoration(
+      border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
+      prefixIcon: Icon(Icons.search),
+      hintText: 'Search photo by keyword'
+  ),
+        
+      ),
+    ),],);
+  // ListView(children: [Text("Some")],)
   }
 }
